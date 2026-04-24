@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Router One — LLM API Gateway · Tianyu Jiang</title>
+<meta name="description" content="One endpoint for OpenAI, Anthropic, Google, Mistral. Smart routing, cost tracking, automatic failover. Claude Code and Codex native." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/base.css" />
+<link rel="stylesheet" href="../assets/project.css" />
+<script>try { document.documentElement.lang = localStorage.getItem('profile.lang') || 'en'; } catch(e){}</script>
+<script defer src="../assets/i18n.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="crops" aria-hidden="true"><span></span></div>
+
+<div class="meta-bar">
+  <div class="wrap">
+    <a class="mark" href="../index.html">T<span class="dot-mark">.</span>J<span class="dot-mark">.</span></a>
+    <span class="center">
+      <span><span class="dot"></span><span class="en">Project 01 of 05</span><span class="zh">项目 01 / 05</span></span>
+      <span class="sep">/</span>
+      <span><span class="en">Selected Work · 2026</span><span class="zh">精选项目 · 2026</span></span>
+      <span class="sep">/</span>
+      <span class="lang-switch">
+        <a href="#" data-lang="en">EN</a>
+        <span class="sep">·</span>
+        <a href="#" data-lang="zh">中文</a>
+      </span>
+    </span>
+    <span class="right"><a href="../index.html"><span class="en">Index ↩</span><span class="zh">返回首页 ↩</span></a></span>
+  </div>
+</div>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="p-back reveal" href="../index.html"><span class="arr">←</span> <span class="en">Back to index</span><span class="zh">返回首页</span></a>
+    <div class="p-grid">
+      <div>
+        <div class="p-nr reveal"><span>①</span><span class="num-txt"><span class="en">Project · 01 / 05</span><span class="zh">项目 · 01 / 05</span></span></div>
+        <h1 class="reveal en">Router <em>One</em><br />— LLM API Gateway</h1>
+        <h1 class="reveal zh">Router <em>One</em><br />—— 大模型 API 网关</h1>
+        <a class="visit-site reveal" href="https://router.one/" target="_blank" rel="noopener">
+          <span class="en">Visit live site</span><span class="zh">访问线上</span>
+          <span class="url">router.one</span>
+          <span class="arr">↗</span>
+        </a>
+      </div>
+      <aside class="p-meta reveal">
+        <div class="block">
+          <span class="k"><span class="en">Product</span><span class="zh">产品</span></span>
+          <span class="v"><span class="en">LLM API Gateway</span><span class="zh">大模型 API 网关</span></span>
+        </div>
+        <div class="block">
+          <span class="k"><span class="en">Timeline</span><span class="zh">时间</span></span>
+          <span class="v mono">2026</span>
+        </div>
+        <div class="block">
+          <span class="k"><span class="en">Role</span><span class="zh">角色</span></span>
+          <span class="v"><span class="en">Solo · full stack</span><span class="zh">独立完成 · 全栈</span></span>
+        </div>
+        <div class="block">
+          <span class="k"><span class="en">Site</span><span class="zh">线上</span></span>
+          <span class="v"><a href="https://router.one/" target="_blank" rel="noopener">router.one <span style="letter-spacing:0">↗</span></a></span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section class="p-intro">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">01 · Overview</span><span class="zh">01 · 概述</span>
+      <span class="big"><span class="en">Why</span><span class="zh">为什么</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div>
+      <p class="lede reveal en">A <em>LLM API gateway</em> built for developers. One endpoint for OpenAI, Anthropic, Google, Mistral and more — with smart routing, real-time cost tracking, and automatic failover between providers.</p>
+      <p class="lede reveal zh">为开发者做的 <em>大模型 API 网关</em>。一个统一入口覆盖 OpenAI、Anthropic、Google、Mistral 等主流模型 —— 带智能路由、实时成本追踪,以及在不同 provider 之间的自动故障转移。</p>
+      <p class="lede reveal en">Native support for <strong>Claude Code</strong> and <strong>Codex</strong> — point their base URLs at Router One and both CLIs work immediately. Per-token precise billing, independent API keys that sidestep account-level bans, and payment via WeChat / Alipay / Stripe.</p>
+      <p class="lede reveal zh">原生支持 <strong>Claude Code</strong> 和 <strong>Codex</strong> —— 把 CLI 的 base URL 指向 Router One 即可立即使用。按 token 精确计费、独立 API key 绕过账号级封禁,支付支持微信 / 支付宝 / Stripe。</p>
+      <div class="tags reveal en">
+        <span>LLM Gateway</span><span class="sep">/</span>
+        <span>Smart Routing</span><span class="sep">/</span>
+        <span>Cost Tracking</span><span class="sep">/</span>
+        <span>Claude Code · Codex</span>
+      </div>
+      <div class="tags reveal zh">
+        <span>大模型网关</span><span class="sep">/</span>
+        <span>智能路由</span><span class="sep">/</span>
+        <span>成本追踪</span><span class="sep">/</span>
+        <span>Claude Code · Codex</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="num">
+        <span class="en">02 · Gallery</span><span class="zh">02 · 图集</span>
+        <span class="rule-short"></span>
+      </div>
+      <h3 class="title">
+        <span class="en">Inside the <em>gateway</em></span>
+        <span class="zh">走进<em>网关</em></span>
+      </h3>
+      <span class="count"><span class="en">04 plates</span><span class="zh">04 张</span></span>
+    </div>
+    <div class="gal-grid">
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/01-router-one/0c99ea38-b1d4-436a-9673-64300e868182.png" alt="Router One landing page with gateway illustration and Claude Code / Codex onboarding" onerror="this.remove()" />
+          <div class="lbl"><span class="no">01</span>Plate 01 <span class="desc">Brand landing · gateway + 2-minute onboarding</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 01</span>
+          <span class="txt en">The brand entry — <em>one endpoint</em> behind a single gateway (OpenAI, Anthropic, Google, Mistral) — with the two-minute <strong>Claude Code / Codex</strong> onboarding built right into the home page. Flip <strong>ANTHROPIC_BASE_URL</strong>, done.</span>
+          <span class="txt zh">品牌入口 —— <em>一个端点</em>背后一张网关(OpenAI、Anthropic、Google、Mistral)—— 首页直接内嵌 <strong>Claude Code / Codex</strong> 两分钟接入。改一个 <strong>ANTHROPIC_BASE_URL</strong> 就完事。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/01-router-one/165e7258-125e-40af-a888-a6f5116ea612.png" alt="Router One model marketplace — 25 models with per-token pricing" onerror="this.remove()" />
+          <div class="lbl"><span class="no">02</span>Plate 02 <span class="desc">Model marketplace · 25 models</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 02</span>
+          <span class="txt en">The <em>model marketplace</em>. <strong>25 models</strong> side by side — Claude opus-4.7 / sonnet-4.6, Gemini 2.5 Pro / Flash, GPT-4.1, GPT-5.4, o3, o4-mini — each with per-token input / output pricing, capability badges, and discount markers visible at a glance.</span>
+          <span class="txt zh"><em>模型市场</em>。<strong>25 个模型</strong>并排展出 —— Claude opus-4.7 / sonnet-4.6、Gemini 2.5 Pro / Flash、GPT-4.1、GPT-5.4、o3、o4-mini —— 每个都明码标了 input / output 单价、能力 badge 和折扣。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/01-router-one/36dbf8aa-0fce-46ec-ab6a-5a2ad4ae4674.png" alt="Router One smart routing strategies and starter code sample" onerror="this.remove()" />
+          <div class="lbl"><span class="no">03</span>Plate 03 <span class="desc">Smart routing · strategies + sample</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 03</span>
+          <span class="txt en"><em>Smart routing</em> exposed as product. Four switchable strategies — <strong>auto failback · cost optimization · latency-aware · quality routing</strong> — alongside a drop-in code sample. A few lines and you're routed.</span>
+          <span class="txt zh"><em>智能路由</em>做成产品面。四种可切换策略 —— <strong>自动回退 · 成本优化 · 延迟感知 · 质量优先</strong> —— 配一段开箱代码,几行就能跑起来。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/01-router-one/4941b180-8eb5-4a89-8fab-42674435fe44.png" alt="Router One usage overview dashboard with token counts, spend, and trend chart" onerror="this.remove()" />
+          <div class="lbl"><span class="no">04</span>Plate 04 <span class="desc">Usage console · counts + trends</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 04</span>
+          <span class="txt en">The <em>usage console</em>. Total requests, input / output / total tokens, monthly spend, budget — plus a <strong>usage-trends chart</strong> queryable by date range. Per-account, real time, same data the billing pipeline sees.</span>
+          <span class="txt zh"><em>用量控制台</em>。请求总数、输入 / 输出 / 总 token、月度花费、预算 —— 外加一张按日期区间可查的<strong>用量趋势图</strong>。账号级、实时,跟计费侧走的是同一份数据。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="p-details">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">03 · Details</span><span class="zh">03 · 细节</span>
+      <span class="big"><span class="en">How</span><span class="zh">怎么做</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div class="cols">
+      <div class="col reveal">
+        <h4><span class="en">Routing</span><span class="zh">路由</span></h4>
+        <ul class="en">
+          <li><strong>Models</strong>OpenAI · Anthropic · Google · Mistral</li>
+          <li><strong>Compat</strong>OpenAI-compatible SDK</li>
+          <li><strong>Strategy</strong>Smart · cost-aware</li>
+          <li><strong>Failover</strong>Automatic between providers</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>模型</strong>OpenAI · Anthropic · Google · Mistral</li>
+          <li><strong>兼容</strong>OpenAI 兼容 SDK</li>
+          <li><strong>策略</strong>智能路由 · 成本感知</li>
+          <li><strong>故障转移</strong>provider 间自动切换</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Billing</span><span class="zh">计费</span></h4>
+        <ul class="en">
+          <li><strong>Pricing</strong>Per-token, precise</li>
+          <li><strong>Payment</strong>WeChat · Alipay · Stripe</li>
+          <li><strong>Tracking</strong>Real-time per request</li>
+          <li><strong>Accounts</strong>Independent keys, no bans</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>计价</strong>按 token 精确计费</li>
+          <li><strong>支付</strong>微信 · 支付宝 · Stripe</li>
+          <li><strong>追踪</strong>实时按请求记录</li>
+          <li><strong>账号</strong>独立 key,无账号封禁</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Integration</span><span class="zh">接入</span></h4>
+        <ul class="en">
+          <li><strong>CLIs</strong>Claude Code · Codex native</li>
+          <li><strong>Docs</strong>API reference</li>
+          <li><strong>Surfaces</strong>Playground · Console</li>
+          <li><strong>SDK</strong>OpenAI-compatible</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>CLI</strong>原生支持 Claude Code · Codex</li>
+          <li><strong>文档</strong>API 参考</li>
+          <li><strong>界面</strong>Playground · 控制台</li>
+          <li><strong>SDK</strong>OpenAI 兼容</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-nav">
+  <div class="wrap">
+    <span class="prev disabled">
+      <span class="dir"><span>←</span> <span class="en">Previous</span><span class="zh">上一项</span></span>
+      <span class="t">—</span>
+    </span>
+    <a class="next" href="02-mining-robot.html">
+      <span class="dir" style="justify-content: flex-end;"><span class="en">Next project</span><span class="zh">下一项</span> <span>→</span></span>
+      <span class="t">Deep-Ground <em>Smart-Eye</em> Mining Robot</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <h2 class="reveal en">Let's build<br />something<br />that <span class="strong">ships.</span></h2>
+      <h2 class="reveal zh">一起做出<br />能<span class="strong">落地</span><br />的东西.</h2>
+      <div class="contact reveal">
+        <a class="c-row" href="mailto:tianyu.jty@outlook.com"><span class="k">Email</span><span class="v">tianyu.jty@outlook.com</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://x.com/Tianyujiangjty" target="_blank" rel="noopener"><span class="k">X</span><span class="v">@Tianyujiangjty</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://github.com/Horisky" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/Horisky</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Tianyu Jiang · 蒋天宇</span>
+      <span><span class="en">Set in Fraunces &amp; Inter Tight</span><span class="zh">字体 Fraunces &amp; Inter Tight</span></span>
+      <a class="totop" href="../index.html"><span class="en">Back to index</span><span class="zh">返回首页</span> <span>↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
+</body>
+</html>

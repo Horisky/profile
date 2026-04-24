@@ -1,0 +1,10 @@
+Expected images — School-Site Vision System
+Drop images with these exact filenames; HTML will pick them up automatically.
+
+  01-dashboard.jpg     16:9   Control center · live feeds overview
+  02-identity.jpg      3:4    Face detection + ArcFace match detail
+  03-vehicle.jpg       3:4    YOLOv8 annotation on gate camera
+  04-architecture.jpg  16:9   Service architecture · ingestion → index → query
+
+Formats accepted: .jpg / .jpeg / .png / .webp
+If you use a different extension, rename to .jpg or tell me to update the HTML.

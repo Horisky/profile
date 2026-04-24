@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AI Short-Drama Production Pipeline — Tianyu Jiang</title>
+<meta name="description" content="Automated short-drama production for Chinese short-video platforms. Seedance · Kling · Feishu middleware." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/base.css" />
+<link rel="stylesheet" href="../assets/project.css" />
+<script>try { document.documentElement.lang = localStorage.getItem('profile.lang') || 'en'; } catch(e){}</script>
+<script defer src="../assets/i18n.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="crops" aria-hidden="true"><span></span></div>
+
+<div class="meta-bar">
+  <div class="wrap">
+    <a class="mark" href="../index.html">T<span class="dot-mark">.</span>J<span class="dot-mark">.</span></a>
+    <span class="center">
+      <span><span class="dot"></span><span class="en">Project 04 of 05</span><span class="zh">项目 04 / 05</span></span>
+      <span class="sep">/</span>
+      <span><span class="en">Selected Work · 2026</span><span class="zh">精选项目 · 2026</span></span>
+      <span class="sep">/</span>
+      <span class="lang-switch">
+        <a href="#" data-lang="en">EN</a>
+        <span class="sep">·</span>
+        <a href="#" data-lang="zh">中文</a>
+      </span>
+    </span>
+    <span class="right"><a href="../index.html"><span class="en">Index ↩</span><span class="zh">返回首页 ↩</span></a></span>
+  </div>
+</div>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="p-back reveal" href="../index.html"><span class="arr">←</span> <span class="en">Back to index</span><span class="zh">返回首页</span></a>
+    <div class="p-grid">
+      <div>
+        <div class="p-nr reveal"><span>④</span><span class="num-txt"><span class="en">Project · 04 / 05</span><span class="zh">项目 · 04 / 05</span></span></div>
+        <h1 class="reveal en">AI Short-Drama<br /><em>Production</em> Pipeline</h1>
+        <h1 class="reveal zh">AI 短剧<br /><em>生产</em> 流水线</h1>
+      </div>
+      <aside class="p-meta reveal">
+        <div class="block"><span class="k"><span class="en">Channels</span><span class="zh">渠道</span></span><span class="v"><span class="en">Douyin · Hongguo</span><span class="zh">抖音 · 红果</span></span></div>
+        <div class="block"><span class="k"><span class="en">Timeline</span><span class="zh">时间</span></span><span class="v mono">2025 — 2026</span></div>
+        <div class="block"><span class="k"><span class="en">Role</span><span class="zh">角色</span></span><span class="v"><span class="en">Full pipeline · sole engineer</span><span class="zh">全链路 · 独立工程师</span></span></div>
+        <div class="block"><span class="k"><span class="en">Status</span><span class="zh">状态</span></span><span class="v"><span class="en">In production</span><span class="zh">已上线</span></span></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section class="p-intro">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">01 · Overview</span><span class="zh">01 · 概述</span>
+      <span class="big"><span class="en">Why</span><span class="zh">为什么</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div>
+      <p class="lede reveal en">Automated <em>short-drama</em> production for Chinese short-video platforms. Seedance and Kling APIs for generation, a Feishu-integrated review and dispatch middleware, and a social-auto-upload layer for multi-platform publishing at scale.</p>
+      <p class="lede reveal zh">面向中国短视频平台的<em>短剧</em>自动化生产。Seedance 和 Kling API 负责生成,飞书集成的审核 + 派发中间件,以及自动发布层支持多平台规模化投放。</p>
+      <p class="lede reveal en">The loop: script drafts feed a generation queue, Feishu bots route approvals to human reviewers, and approved clips flow into a publishing agent that handles platform-specific packaging, scheduling, and posting. A single operator can run what used to need a small team.</p>
+      <p class="lede reveal zh">循环:剧本初稿进生成队列,飞书机器人把审核卡片推给人类审核,通过后进入发布 agent 处理平台适配、排期和投放。一个人就能跑过去需要小团队做的量。</p>
+      <div class="tags reveal">
+        <span>Seedance</span><span class="sep">/</span>
+        <span>Kling</span><span class="sep">/</span>
+        <span><span class="en">Feishu Bot</span><span class="zh">飞书机器人</span></span><span class="sep">/</span>
+        <span><span class="en">Automation</span><span class="zh">自动化</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="num"><span class="en">02 · Gallery</span><span class="zh">02 · 图集</span> <span class="rule-short"></span></div>
+      <h3 class="title"><span class="en">Pipeline <em>surfaces</em> &amp; runs</span><span class="zh">流水线<em>界面</em>与实跑</span></h3>
+      <span class="count"><span class="en">04 plates</span><span class="zh">04 张</span></span>
+    </div>
+    <div class="gal-grid">
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/04-short-drama/0b09615d918e07b255495e218757dca8.jpg" alt="VideoForge workspace during a live generation run" onerror="this.remove()" />
+          <div class="lbl"><span class="no">01</span>Plate 01 <span class="desc">Workspace · mid-generation</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 01</span>
+          <span class="txt en">The <em>workspace</em> at mid-run. A single product image feeds a config-driven storyboard template; the right panel streams <strong>live ffmpeg + agent logs</strong> — evaluator passes, client flow completes, total ~<strong>6m 44s</strong>.</span>
+          <span class="txt zh">运行中的<em>工作台</em>。一张商品图驱动配置化分镜模板;右侧面板实时滚 <strong>ffmpeg + agent 日志</strong> —— evaluator 通过、client 流程结束,总耗时约 <strong>6m 44s</strong>。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-3 reveal">
+        <div class="img-slot" data-ratio="4:3">
+          <img src="../image/04-short-drama/af46516e-b1cd-4a6f-b8f7-a12ae1fa72f4.png" alt="VideoForge workspace with a clothing subject mid-pipeline" onerror="this.remove()" />
+          <div class="lbl"><span class="no">02</span>Plate 02 <span class="desc">Pipeline · intermediate artifacts</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 02</span>
+          <span class="txt en">A clothing subject mid-pipeline. The run emits <strong>named intermediate artifacts</strong> — storyboard, marketing brief, shot plan, director &amp; planner reasoning — so any stage can be inspected or rerun without touching the rest.</span>
+          <span class="txt zh">一件服装在 pipeline 中段。运行会产出<strong>命名中间件</strong> —— 分镜、营销脑图、镜头计划、导演 + 规划推理 —— 任何一段都能单独查看或重跑。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-3 reveal">
+        <div class="img-slot" data-ratio="4:3">
+          <img src="../image/04-short-drama/e92447ce-b58a-464b-86dd-de2a843f56d9.png" alt="VideoForge task history" onerror="this.remove()" />
+          <div class="lbl"><span class="no">03</span>Plate 03 <span class="desc">Task history · terminal states</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 03</span>
+          <span class="txt en">Task history with every run addressable by ID and terminal state — <strong>生成中 · 完成 · 已完成 · 失败</strong>. The operator can re-queue any leg without leaving the UI.</span>
+          <span class="txt zh">历史任务,每次运行按 ID 和终态归档 —— <strong>生成中 · 完成 · 已完成 · 失败</strong>。操作员不用离开 UI 就能重新排队任意一段。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/04-short-drama/1e9d33bc-18dc-45b1-a2e7-438b68500a02.png" alt="VideoForge finished-video management" onerror="this.remove()" />
+          <div class="lbl"><span class="no">04</span>Plate 04 <span class="desc">Finished videos · ready for dispatch</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 04</span>
+          <span class="txt en">The <em>成片管理</em> shelf — approved shorts, thumbnailed, ready for multi-platform dispatch. From product photo to uploadable MP4, the hands-on work for an operator is essentially zero.</span>
+          <span class="txt zh"><em>成片管理</em>货架 —— 审核通过的成片缩略图,准备多平台派发。从商品图到可上传的 MP4,人手干预几乎为零。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="p-details">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">03 · Details</span><span class="zh">03 · 细节</span>
+      <span class="big"><span class="en">How</span><span class="zh">怎么做</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div class="cols">
+      <div class="col reveal">
+        <h4><span class="en">Generation</span><span class="zh">生成</span></h4>
+        <ul class="en">
+          <li><strong>Video</strong>Seedance · Kling APIs</li>
+          <li><strong>Script</strong>LLM-assisted drafts</li>
+          <li><strong>Voice / SFX</strong>TTS + mixer</li>
+          <li><strong>Queue</strong>Batched with retries</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>视频</strong>Seedance · Kling API</li>
+          <li><strong>剧本</strong>LLM 协同起稿</li>
+          <li><strong>人声 / 音效</strong>TTS + 混音</li>
+          <li><strong>队列</strong>批量 + 重试</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Review</span><span class="zh">审核</span></h4>
+        <ul class="en">
+          <li><strong>Channel</strong>Feishu bot</li>
+          <li><strong>UI</strong>Interactive approval card</li>
+          <li><strong>Routing</strong>Reviewer pools · SLAs</li>
+          <li><strong>Audit</strong>Decision log</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>渠道</strong>飞书机器人</li>
+          <li><strong>UI</strong>交互式审批卡片</li>
+          <li><strong>路由</strong>审核人池 · SLA</li>
+          <li><strong>留痕</strong>决策日志</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Distribution</span><span class="zh">分发</span></h4>
+        <ul class="en">
+          <li><strong>Platforms</strong>Douyin · Hongguo · more</li>
+          <li><strong>Packaging</strong>Per-platform specs</li>
+          <li><strong>Scheduling</strong>Time slots + pacing</li>
+          <li><strong>Scale</strong>One operator · many titles</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>平台</strong>抖音 · 红果 · 更多</li>
+          <li><strong>适配</strong>按平台规格打包</li>
+          <li><strong>排期</strong>时段 + 节奏控制</li>
+          <li><strong>规模</strong>一个人 · 多个剧</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-nav">
+  <div class="wrap">
+    <a class="prev" href="03-rag-saas.html">
+      <span class="dir"><span>←</span> <span class="en">Previous</span><span class="zh">上一项</span></span>
+      <span class="t">Multi-LLM <em>RAG SaaS</em> Platform</span>
+    </a>
+    <a class="next" href="05-school-vision.html">
+      <span class="dir" style="justify-content: flex-end;"><span class="en">Next project</span><span class="zh">下一项</span> <span>→</span></span>
+      <span class="t">School-Site <em>Vision System</em></span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <h2 class="reveal en">Let's build<br />something<br />that <span class="strong">ships.</span></h2>
+      <h2 class="reveal zh">一起做出<br />能<span class="strong">落地</span><br />的东西.</h2>
+      <div class="contact reveal">
+        <a class="c-row" href="mailto:tianyu.jty@outlook.com"><span class="k">Email</span><span class="v">tianyu.jty@outlook.com</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://x.com/Tianyujiangjty" target="_blank" rel="noopener"><span class="k">X</span><span class="v">@Tianyujiangjty</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://github.com/Horisky" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/Horisky</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Tianyu Jiang · 蒋天宇</span>
+      <span><span class="en">Set in Fraunces &amp; Inter Tight</span><span class="zh">字体 Fraunces &amp; Inter Tight</span></span>
+      <a class="totop" href="../index.html"><span class="en">Back to index</span><span class="zh">返回首页</span> <span>↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>School-Site Vision System — Tianyu Jiang</title>
+<meta name="description" content="Campus camera rebuild: InsightFace + ArcFace + YOLOv8 + FAISS, served by FastAPI." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/base.css" />
+<link rel="stylesheet" href="../assets/project.css" />
+<script>try { document.documentElement.lang = localStorage.getItem('profile.lang') || 'en'; } catch(e){}</script>
+<script defer src="../assets/i18n.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="crops" aria-hidden="true"><span></span></div>
+
+<div class="meta-bar">
+  <div class="wrap">
+    <a class="mark" href="../index.html">T<span class="dot-mark">.</span>J<span class="dot-mark">.</span></a>
+    <span class="center">
+      <span><span class="dot"></span><span class="en">Project 05 of 05</span><span class="zh">项目 05 / 05</span></span>
+      <span class="sep">/</span>
+      <span><span class="en">Selected Work · 2026</span><span class="zh">精选项目 · 2026</span></span>
+      <span class="sep">/</span>
+      <span class="lang-switch">
+        <a href="#" data-lang="en">EN</a>
+        <span class="sep">·</span>
+        <a href="#" data-lang="zh">中文</a>
+      </span>
+    </span>
+    <span class="right"><a href="../index.html"><span class="en">Index ↩</span><span class="zh">返回首页 ↩</span></a></span>
+  </div>
+</div>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="p-back reveal" href="../index.html"><span class="arr">←</span> <span class="en">Back to index</span><span class="zh">返回首页</span></a>
+    <div class="p-grid">
+      <div>
+        <div class="p-nr reveal"><span>⑤</span><span class="num-txt"><span class="en">Project · 05 / 05</span><span class="zh">项目 · 05 / 05</span></span></div>
+        <h1 class="reveal en">School-Site<br /><em>Vision System</em></h1>
+        <h1 class="reveal zh">校园<br /><em>视觉系统</em></h1>
+      </div>
+      <aside class="p-meta reveal">
+        <div class="block"><span class="k"><span class="en">Client</span><span class="zh">客户</span></span><span class="v"><span class="en">Campus security operator</span><span class="zh">校园安保方</span></span></div>
+        <div class="block"><span class="k"><span class="en">Timeline</span><span class="zh">时间</span></span><span class="v mono">2025</span></div>
+        <div class="block"><span class="k"><span class="en">Role</span><span class="zh">角色</span></span><span class="v"><span class="en">Full rebuild · sole engineer</span><span class="zh">全量重构 · 独立工程师</span></span></div>
+        <div class="block"><span class="k"><span class="en">Status</span><span class="zh">状态</span></span><span class="v"><span class="en">Deployed</span><span class="zh">已部署</span></span></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section class="p-intro">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">01 · Overview</span><span class="zh">01 · 概述</span>
+      <span class="big"><span class="en">Why</span><span class="zh">为什么</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div>
+      <p class="lede reveal en">Full rebuild of a campus camera system: <em>InsightFace + ArcFace</em> for identity, YOLOv8m for vehicle detection, FAISS for identity search, served through FastAPI.</p>
+      <p class="lede reveal zh">校园相机系统全量重构:<em>InsightFace + ArcFace</em> 做身份识别,YOLOv8m 做车辆检测,FAISS 做身份检索,FastAPI 提供服务。</p>
+      <p class="lede reveal en">The old system ran brittle rule-based detection with no search index. The rebuild swapped it end-to-end: fresh embeddings, a proper vector store for identity lookup, tighter model choices for vehicles, and a service API that the existing frontend could drop onto without a frontend rewrite.</p>
+      <p class="lede reveal zh">旧系统是脆弱的规则检测,没有检索索引。重构把它端到端换掉:新的 embedding、正经的向量库做身份检索、更紧凑的车辆模型,以及能让旧前端直接对接的新服务 API —— 前端不用重写。</p>
+      <div class="tags reveal">
+        <span>InsightFace</span><span class="sep">/</span>
+        <span>ArcFace</span><span class="sep">/</span>
+        <span>YOLOv8</span><span class="sep">/</span>
+        <span>FAISS</span><span class="sep">/</span>
+        <span>FastAPI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="num"><span class="en">02 · Gallery</span><span class="zh">02 · 图集</span> <span class="rule-short"></span></div>
+      <h3 class="title"><span class="en">Control <em>surfaces</em> &amp; detections</span><span class="zh">控制<em>界面</em>与检测</span></h3>
+      <span class="count"><span class="en">04 plates</span><span class="zh">04 张</span></span>
+    </div>
+    <div class="gal-grid">
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/05-school-vision/767f8cf72e9da12c60a5a3b18be9986b.jpg" alt="Live face detection on crowd footage, multiple faces ranked by confidence" onerror="this.remove()" />
+          <div class="lbl"><span class="no">01</span>Plate 01 <span class="desc">Live face detection · ranked by quality</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 01</span>
+          <span class="txt en">Two live camera frames, seconds apart. The system finds <strong>16–19 faces per frame</strong>, ranks them by detection quality, and flags unknowns as <em>陌生人</em> against the enrolled identity base — real throughput on real density.</span>
+          <span class="txt zh">两帧实时画面,相隔几秒。系统每帧找到 <strong>16–19 张人脸</strong>,按检测质量排序,对照已入库身份把陌生人标成 <em>陌生人</em> —— 真实密度下的真实吞吐。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-3 reveal">
+        <div class="img-slot" data-ratio="4:3">
+          <img src="../image/05-school-vision/8d7ab6941445d6fde56c8f39fdf91960.jpg" alt="Vehicle capture records grid with confidence scores and camera IDs" onerror="this.remove()" />
+          <div class="lbl"><span class="no">02</span>Plate 02 <span class="desc">Vehicle capture records</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 02</span>
+          <span class="txt en">Vehicle capture grid. YOLOv8 boxes the subject, confidences are exposed next to each thumbnail (<strong>57%–93%</strong>), and every record carries its <strong>camera ID + timestamp</strong> for audit.</span>
+          <span class="txt zh">车辆抓拍格。YOLOv8 框出目标,每张缩略图旁边直接显示置信度(<strong>57%–93%</strong>),每条记录都带 <strong>相机 ID + 时间戳</strong> 可回溯。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-3 reveal">
+        <div class="img-slot" data-ratio="4:3">
+          <img src="../image/05-school-vision/363ae6c9da9762089ab8c5b856f6a0d9.jpg" alt="Camera management admin UI" onerror="this.remove()" />
+          <div class="lbl"><span class="no">03</span>Plate 03 <span class="desc">Operator console · cameras + retention</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 03</span>
+          <span class="txt en">The operator console — <strong>RTSP source</strong>, school + device IDs, capture schedule with time-window limits, and a <strong>retention policy</strong> for old evidence. Day-to-day controls, nothing the operator can't handle alone.</span>
+          <span class="txt zh">运营台 —— <strong>RTSP 源</strong>、学校和设备 ID、按时段限制的抓拍排期,以及老证据的<strong>留存策略</strong>。日常控制,都能一个人搞。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/05-school-vision/7b609ba7b26444365dd51832078f7f9f.jpg" alt="Ad-hoc face-detection tool with quality filter" onerror="this.remove()" />
+          <div class="lbl"><span class="no">04</span>Plate 04 <span class="desc">Ad-hoc detect tool · quality filter</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 04</span>
+          <span class="txt en">An ad-hoc <em>Face Detect with Quality Filter</em> surface. Drop any frame in, return a ranked list of detected faces — the same backend the live pipeline uses, exposed for manual review and reruns.</span>
+          <span class="txt zh">一个即时的 <em>带质量过滤的人脸检测</em> 入口。丢一帧进去,返回按质量排序的人脸 —— 和线上流水线同一套后端,为手动复核和重跑开放。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="p-details">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">03 · Details</span><span class="zh">03 · 细节</span>
+      <span class="big"><span class="en">How</span><span class="zh">怎么做</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div class="cols">
+      <div class="col reveal">
+        <h4><span class="en">Identity</span><span class="zh">身份</span></h4>
+        <ul class="en">
+          <li><strong>Detector</strong>InsightFace</li>
+          <li><strong>Embedding</strong>ArcFace</li>
+          <li><strong>Search</strong>FAISS</li>
+          <li><strong>Throughput</strong>Real-time per camera</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>检测</strong>InsightFace</li>
+          <li><strong>Embedding</strong>ArcFace</li>
+          <li><strong>检索</strong>FAISS</li>
+          <li><strong>吞吐</strong>每路相机实时</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Vehicle</span><span class="zh">车辆</span></h4>
+        <ul class="en">
+          <li><strong>Detector</strong>YOLOv8m</li>
+          <li><strong>Classes</strong>Car · van · bicycle · plate</li>
+          <li><strong>Tracking</strong>ByteTrack</li>
+          <li><strong>OCR</strong>Plate read pipeline</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>检测</strong>YOLOv8m</li>
+          <li><strong>类别</strong>小车 · 面包 · 自行车 · 车牌</li>
+          <li><strong>跟踪</strong>ByteTrack</li>
+          <li><strong>OCR</strong>车牌识别流水线</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Platform</span><span class="zh">平台</span></h4>
+        <ul class="en">
+          <li><strong>API</strong>FastAPI</li>
+          <li><strong>Store</strong>PostgreSQL + FAISS</li>
+          <li><strong>Deploy</strong>Docker on-prem</li>
+          <li><strong>Frontend</strong>Existing (unchanged)</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>API</strong>FastAPI</li>
+          <li><strong>存储</strong>PostgreSQL + FAISS</li>
+          <li><strong>部署</strong>本地 Docker</li>
+          <li><strong>前端</strong>沿用旧前端</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-nav">
+  <div class="wrap">
+    <a class="prev" href="04-short-drama.html">
+      <span class="dir"><span>←</span> <span class="en">Previous</span><span class="zh">上一项</span></span>
+      <span class="t">AI Short-Drama <em>Production Pipeline</em></span>
+    </a>
+    <span class="next disabled">
+      <span class="dir" style="justify-content: flex-end;"><span class="en">End of list</span><span class="zh">已到末项</span></span>
+      <span class="t">—</span>
+    </span>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <h2 class="reveal en">Let's build<br />something<br />that <span class="strong">ships.</span></h2>
+      <h2 class="reveal zh">一起做出<br />能<span class="strong">落地</span><br />的东西.</h2>
+      <div class="contact reveal">
+        <a class="c-row" href="mailto:tianyu.jty@outlook.com"><span class="k">Email</span><span class="v">tianyu.jty@outlook.com</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://x.com/Tianyujiangjty" target="_blank" rel="noopener"><span class="k">X</span><span class="v">@Tianyujiangjty</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://github.com/Horisky" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/Horisky</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Tianyu Jiang · 蒋天宇</span>
+      <span><span class="en">Set in Fraunces &amp; Inter Tight</span><span class="zh">字体 Fraunces &amp; Inter Tight</span></span>
+      <a class="totop" href="../index.html"><span class="en">Back to index</span><span class="zh">返回首页</span> <span>↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
+</body>
+</html>

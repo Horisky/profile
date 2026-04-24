@@ -1,0 +1,11 @@
+Expected images — Deep-Ground Smart-Eye Mining Robot
+Drop images with these exact filenames; HTML will pick them up automatically.
+
+  01-hero.jpg        16:9   Robot on rail in tunnel · wide establishing shot
+                            (also used as the FEATURED thumbnail on index.html)
+  02-camera.jpg      3:4    KBA18(F) explosion-proof camera close-up
+  03-lidar.jpg       3:4    Livox Mid-360 + 3D point cloud render
+  04-inference.jpg   16:9   Jetson Orin NX dashboard · detection overlay
+
+Formats accepted: .jpg / .jpeg / .png / .webp
+If you use a different extension, rename to .jpg or tell me to update the HTML.

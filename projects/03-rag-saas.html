@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multi-LLM RAG SaaS Platform — Tianyu Jiang</title>
+<meta name="description" content="Freemium RAG platform with image-text hybrid retrieval, dual-market pricing, and a multi-provider LLM router." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/base.css" />
+<link rel="stylesheet" href="../assets/project.css" />
+<script>try { document.documentElement.lang = localStorage.getItem('profile.lang') || 'en'; } catch(e){}</script>
+<script defer src="../assets/i18n.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="crops" aria-hidden="true"><span></span></div>
+
+<div class="meta-bar">
+  <div class="wrap">
+    <a class="mark" href="../index.html">T<span class="dot-mark">.</span>J<span class="dot-mark">.</span></a>
+    <span class="center">
+      <span><span class="dot"></span><span class="en">Project 03 of 05</span><span class="zh">项目 03 / 05</span></span>
+      <span class="sep">/</span>
+      <span><span class="en">Selected Work · 2026</span><span class="zh">精选项目 · 2026</span></span>
+      <span class="sep">/</span>
+      <span class="lang-switch">
+        <a href="#" data-lang="en">EN</a>
+        <span class="sep">·</span>
+        <a href="#" data-lang="zh">中文</a>
+      </span>
+    </span>
+    <span class="right"><a href="../index.html"><span class="en">Index ↩</span><span class="zh">返回首页 ↩</span></a></span>
+  </div>
+</div>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="p-back reveal" href="../index.html"><span class="arr">←</span> <span class="en">Back to index</span><span class="zh">返回首页</span></a>
+    <div class="p-grid">
+      <div>
+        <div class="p-nr reveal"><span>③</span><span class="num-txt"><span class="en">Project · 03 / 05</span><span class="zh">项目 · 03 / 05</span></span></div>
+        <h1 class="reveal en">Multi-LLM<br /><em>RAG SaaS</em> Platform</h1>
+        <h1 class="reveal zh">多 LLM<br /><em>RAG SaaS</em> 平台</h1>
+      </div>
+      <aside class="p-meta reveal">
+        <div class="block"><span class="k"><span class="en">Product</span><span class="zh">产品</span></span><span class="v"><span class="en">Freemium RAG platform</span><span class="zh">Freemium RAG 平台</span></span></div>
+        <div class="block"><span class="k"><span class="en">Timeline</span><span class="zh">时间</span></span><span class="v mono">2025 — 2026</span></div>
+        <div class="block"><span class="k"><span class="en">Role</span><span class="zh">角色</span></span><span class="v"><span class="en">AI service layer · sole author</span><span class="zh">AI 服务层 · 独立作者</span></span></div>
+        <div class="block"><span class="k"><span class="en">Status</span><span class="zh">状态</span></span><span class="v"><span class="en">Shipping</span><span class="zh">上线中</span></span></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section class="p-intro">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">01 · Overview</span><span class="zh">01 · 概述</span>
+      <span class="big"><span class="en">Why</span><span class="zh">为什么</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div>
+      <p class="lede reveal en">A freemium RAG platform with <em>image-text hybrid retrieval</em> and dual-market pricing (China + overseas). Built around bge-m3, Milvus, and a pluggable multi-provider LLM router. I author the Python AI service layer end-to-end.</p>
+      <p class="lede reveal zh">带 <em>图文混合检索</em> 的 Freemium RAG 平台,中国 + 海外双市场定价。基于 bge-m3、Milvus,以及一个可插拔的多 provider LLM 路由。Python AI 服务层我独立完成。</p>
+      <p class="lede reveal en">The product bet: most RAG offerings ship a single embedding model and a single LLM. This one lets teams hot-swap providers, blend text with image retrieval, and run the whole thing on their own compute when compliance demands it.</p>
+      <p class="lede reveal zh">产品思路:多数 RAG 产品只给一个 embedding + 一个 LLM。这个可以随时切 provider、把文本和图像一起检,合规要求时可以整套跑在客户自己的机器上。</p>
+      <div class="tags reveal">
+        <span>LangChain</span><span class="sep">/</span>
+        <span>Milvus</span><span class="sep">/</span>
+        <span>bge-m3</span><span class="sep">/</span>
+        <span>Go · Python</span><span class="sep">/</span>
+        <span>SaaS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="num"><span class="en">02 · Gallery</span><span class="zh">02 · 图集</span> <span class="rule-short"></span></div>
+      <h3 class="title"><span class="en">The <em>knowledge-base</em> surface</span><span class="zh"><em>知识库</em>产品界面</span></h3>
+      <span class="count"><span class="en">01 plate</span><span class="zh">01 张</span></span>
+    </div>
+    <div class="gal-grid">
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/03-rag-saas/e379e696-1aec-47d3-baf2-2cf7ed6b17ff.png" alt="Knowledge-base management and grounded Q&A surface of the RAG SaaS product" onerror="this.remove()" />
+          <div class="lbl"><span class="no">01</span>Plate 01 <span class="desc">Knowledge bases + grounded Q&amp;A surface</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 01</span>
+          <span class="txt en">The <em>Ask the Knowledge Base</em> surface in production — knowledge-base registry above, retrieval-grounded Q&amp;A below. Every answer carries its <strong>source citations</strong> back to the exact file and page; the provider (here <strong>openai</strong>) is swappable per-query.</span>
+          <span class="txt zh">生产环境的 <em>Ask the Knowledge Base</em> 界面 —— 上方是知识库登记,下方是带检索依据的问答。每个回答都带<strong>引用溯源</strong>精确到文件和页;provider(这里是 <strong>openai</strong>)每次查询都能换。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="p-details">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">03 · Details</span><span class="zh">03 · 细节</span>
+      <span class="big"><span class="en">How</span><span class="zh">怎么做</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div class="cols">
+      <div class="col reveal">
+        <h4><span class="en">Retrieval</span><span class="zh">检索</span></h4>
+        <ul class="en">
+          <li><strong>Embeddings</strong>bge-m3 · CLIP</li>
+          <li><strong>Vector store</strong>Milvus</li>
+          <li><strong>Strategy</strong>Hybrid text + image</li>
+          <li><strong>Reranking</strong>Cross-encoder</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>Embedding</strong>bge-m3 · CLIP</li>
+          <li><strong>向量库</strong>Milvus</li>
+          <li><strong>策略</strong>文 + 图混检</li>
+          <li><strong>重排</strong>Cross-encoder</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Models</span><span class="zh">模型</span></h4>
+        <ul class="en">
+          <li><strong>Router</strong>Multi-provider LLM</li>
+          <li><strong>Open</strong>Qwen2.5 · DeepSeek · LoRA</li>
+          <li><strong>Closed</strong>Claude · GPT series</li>
+          <li><strong>Serving</strong>vLLM · LM Studio</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>路由</strong>多 provider LLM</li>
+          <li><strong>开源</strong>Qwen2.5 · DeepSeek · LoRA</li>
+          <li><strong>闭源</strong>Claude · GPT 系列</li>
+          <li><strong>部署</strong>vLLM · LM Studio</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Platform</span><span class="zh">平台</span></h4>
+        <ul class="en">
+          <li><strong>Service</strong>Python AI layer</li>
+          <li><strong>API</strong>FastAPI · gRPC bridge</li>
+          <li><strong>Markets</strong>CN + overseas, dual pricing</li>
+          <li><strong>Self-host</strong>Docker Compose</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>服务</strong>Python AI 层</li>
+          <li><strong>API</strong>FastAPI · gRPC 桥</li>
+          <li><strong>市场</strong>国内 + 海外,双定价</li>
+          <li><strong>私有化</strong>Docker Compose</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-nav">
+  <div class="wrap">
+    <a class="prev" href="02-mining-robot.html">
+      <span class="dir"><span>←</span> <span class="en">Previous</span><span class="zh">上一项</span></span>
+      <span class="t">Deep-Ground <em>Smart-Eye</em> Mining Robot</span>
+    </a>
+    <a class="next" href="04-short-drama.html">
+      <span class="dir" style="justify-content: flex-end;"><span class="en">Next project</span><span class="zh">下一项</span> <span>→</span></span>
+      <span class="t">AI Short-Drama <em>Production Pipeline</em></span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <h2 class="reveal en">Let's build<br />something<br />that <span class="strong">ships.</span></h2>
+      <h2 class="reveal zh">一起做出<br />能<span class="strong">落地</span><br />的东西.</h2>
+      <div class="contact reveal">
+        <a class="c-row" href="mailto:tianyu.jty@outlook.com"><span class="k">Email</span><span class="v">tianyu.jty@outlook.com</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://x.com/Tianyujiangjty" target="_blank" rel="noopener"><span class="k">X</span><span class="v">@Tianyujiangjty</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://github.com/Horisky" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/Horisky</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Tianyu Jiang · 蒋天宇</span>
+      <span><span class="en">Set in Fraunces &amp; Inter Tight</span><span class="zh">字体 Fraunces &amp; Inter Tight</span></span>
+      <a class="totop" href="../index.html"><span class="en">Back to index</span><span class="zh">返回首页</span> <span>↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
+</body>
+</html>

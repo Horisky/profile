@@ -1,0 +1,10 @@
+Expected images — Multi-LLM RAG SaaS Platform
+Drop images with these exact filenames; HTML will pick them up automatically.
+
+  01-landing.jpg       16:9   Marketing / landing page hero section
+  02-retrieval.jpg     3:4    Image-text hybrid retrieval result UI
+  03-console.jpg       3:4    Admin / analytics dashboard
+  04-architecture.jpg  16:9   System diagram · provider router + retrieval
+
+Formats accepted: .jpg / .jpeg / .png / .webp
+If you use a different extension, rename to .jpg or tell me to update the HTML.

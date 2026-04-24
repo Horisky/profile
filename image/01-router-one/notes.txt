@@ -1,0 +1,17 @@
+Images — Router One (LLM API Gateway)
+Wired to the page; real files below replace the placeholder slots.
+
+  0c99ea38-b1d4-436a-9673-64300e868182.png   Plate 01 · Landing
+      Brand hero · gateway illustration · Claude Code / Codex onboarding
+
+  165e7258-125e-40af-a888-a6f5116ea612.png   Plate 02 · Model Marketplace
+      25 models · per-token pricing · capability badges
+
+  36dbf8aa-0fce-46ec-ab6a-5a2ad4ae4674.png   Plate 03 · Smart Routing
+      Four strategies + drop-in code sample
+
+  4941b180-8eb5-4a89-8fab-42674435fe44.png   Plate 04 · Usage Console
+      Requests · tokens · spend · usage-trends chart
+
+Featured thumbnail on index.html uses Plate 01.
+To swap a plate: replace the corresponding file or tell me to repoint the src.

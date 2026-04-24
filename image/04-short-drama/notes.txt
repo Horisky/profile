@@ -1,0 +1,10 @@
+Expected images — AI Short-Drama Production Pipeline
+Drop images with these exact filenames; HTML will pick them up automatically.
+
+  01-output.jpg      16:9   Generated short-drama still / storyboard
+  02-review.jpg      3:4    Feishu dispatch bot + approval card
+  03-publishing.jpg  3:4    Multi-platform upload dashboard
+  04-flow.jpg        16:9   Pipeline diagram · script → generation → review → post
+
+Formats accepted: .jpg / .jpeg / .png / .webp
+If you use a different extension, rename to .jpg or tell me to update the HTML.

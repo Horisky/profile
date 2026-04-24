@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Deep-Ground Smart-Eye Mining Robot — Tianyu Jiang</title>
+<meta name="description" content="Vehicle-mounted rail inspection robot for an underground gold mine. KBA18 camera · Livox Mid-360 · Jetson Orin NX." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,500&family=Inter+Tight:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/base.css" />
+<link rel="stylesheet" href="../assets/project.css" />
+<script>try { document.documentElement.lang = localStorage.getItem('profile.lang') || 'en'; } catch(e){}</script>
+<script defer src="../assets/i18n.js"></script>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+<div class="crops" aria-hidden="true"><span></span></div>
+
+<div class="meta-bar">
+  <div class="wrap">
+    <a class="mark" href="../index.html">T<span class="dot-mark">.</span>J<span class="dot-mark">.</span></a>
+    <span class="center">
+      <span><span class="dot"></span><span class="en">Project 02 of 05</span><span class="zh">项目 02 / 05</span></span>
+      <span class="sep">/</span>
+      <span><span class="en">Selected Work · 2026</span><span class="zh">精选项目 · 2026</span></span>
+      <span class="sep">/</span>
+      <span class="lang-switch">
+        <a href="#" data-lang="en">EN</a>
+        <span class="sep">·</span>
+        <a href="#" data-lang="zh">中文</a>
+      </span>
+    </span>
+    <span class="right"><a href="../index.html"><span class="en">Index ↩</span><span class="zh">返回首页 ↩</span></a></span>
+  </div>
+</div>
+
+<header class="p-hero">
+  <div class="wrap">
+    <a class="p-back reveal" href="../index.html"><span class="arr">←</span> <span class="en">Back to index</span><span class="zh">返回首页</span></a>
+    <div class="p-grid">
+      <div>
+        <div class="p-nr reveal"><span>②</span><span class="num-txt"><span class="en">Project · 02 / 05</span><span class="zh">项目 · 02 / 05</span></span></div>
+        <h1 class="reveal en">Deep-Ground <em>Smart-Eye</em><br />Mining Robot</h1>
+        <h1 class="reveal zh">探地 <em>Smart-Eye</em><br />矿用巡检机器人</h1>
+      </div>
+      <aside class="p-meta reveal">
+        <div class="block"><span class="k"><span class="en">Client</span><span class="zh">客户</span></span><span class="v"><span class="en">Shandong Gold Mine Group</span><span class="zh">山东黄金矿业集团</span></span></div>
+        <div class="block"><span class="k"><span class="en">Timeline</span><span class="zh">时间</span></span><span class="v mono"><span class="en">2026 — Ongoing</span><span class="zh">2026 · 进行中</span></span></div>
+        <div class="block"><span class="k"><span class="en">Role</span><span class="zh">角色</span></span><span class="v"><span class="en">Perception lead · Full stack</span><span class="zh">感知栈主导 · 全栈</span></span></div>
+        <div class="block"><span class="k"><span class="en">Status</span><span class="zh">状态</span></span><span class="v"><span class="en">In production</span><span class="zh">现场试运行</span></span></div>
+      </aside>
+    </div>
+  </div>
+</header>
+
+<section class="p-intro">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">01 · Overview</span><span class="zh">01 · 概述</span>
+      <span class="big"><span class="en">Why</span><span class="zh">为什么</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div>
+      <p class="lede reveal en">First-of-its-kind vehicle-mounted rail inspection system for an <em>underground gold mine</em>. End-to-end ownership of the perception stack — KBA18(F) explosion-proof camera integration, Livox Mid-360 LiDAR for 3D mapping, on-board inference on Jetson Orin NX 16GB, and a full data plus simulation architecture for iteration.</p>
+      <p class="lede reveal zh">面向<em>井下黄金矿</em>的首创车载轨道巡检系统。端到端负责整套感知栈 —— KBA18(F) 防爆相机集成、Livox Mid-360 LiDAR 三维建图、Jetson Orin NX 16GB 板载推理,以及一套为迭代搭建的数据 + 仿真架构。</p>
+      <p class="lede reveal en">The system replaces human patrol on one of the most hazardous legs of underground gold mining — the haulage rail. Every detection and every frame is a step toward <strong>removing people from harm</strong>, while giving mine operators a continuous, queryable record of tunnel health.</p>
+      <p class="lede reveal zh">系统替代人工巡检井下黄金矿最危险的一段 —— 运输轨道。每一次检测、每一帧画面,都是在<strong>把人从危险里拿出来</strong>,同时为矿方留下连续、可查询的隧道健康档案。</p>
+      <div class="tags reveal">
+        <span>Jetson Orin NX</span><span class="sep">/</span>
+        <span>Livox Mid-360</span><span class="sep">/</span>
+        <span>KBA18(F)</span><span class="sep">/</span>
+        <span><span class="en">Industrial CV</span><span class="zh">工业 CV</span></span><span class="sep">/</span>
+        <span><span class="en">Edge AI</span><span class="zh">边端 AI</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <div class="num"><span class="en">02 · Gallery</span><span class="zh">02 · 图集</span> <span class="rule-short"></span></div>
+      <h3 class="title"><span class="en">Field <em>imagery</em> &amp; the vehicle</span><span class="zh">现场<em>影像</em>与车体</span></h3>
+      <span class="count"><span class="en">02 plates</span><span class="zh">02 张</span></span>
+    </div>
+    <div class="gal-grid">
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="16:9">
+          <img src="../image/02-mining-robot/6cc87d42d0647042bbcac1818ed15224.jpg" alt="Underground haulage rail — live frame from onboard camera" onerror="this.remove()" />
+          <div class="lbl"><span class="no">01</span>Plate 01 <span class="desc">Underground haulage rail · onboard camera frame</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 01</span>
+          <span class="txt en">Live inspection frame from inside the haulage rail at <strong>910 一车场 01</strong>. The timestamp and station overlay are baked into the capture format — every frame is addressable by site and moment.</span>
+          <span class="txt zh"><strong>910 一车场 01</strong> 巡检现场实时帧。时间戳和工位编号直接烧进采集格式 —— 每一帧都能按位置和时刻定位。</span>
+        </figcaption>
+      </figure>
+
+      <figure class="plate gal-span-6 reveal">
+        <div class="img-slot" data-ratio="4:3">
+          <img src="../image/02-mining-robot/7ee49b1574910f404a1bf94787e86645.jpg" alt="CRRC-built inspection vehicle arriving at the mine, lifted into position by crane" onerror="this.remove()" />
+          <div class="lbl"><span class="no">02</span>Plate 02 <span class="desc">CRRC locomotive on delivery · pre-commissioning</span></div>
+        </div>
+        <figcaption>
+          <span class="no">Fig. 02</span>
+          <span class="txt en">The vehicle on arrival — a <strong>CRRC-built</strong> explosion-rated chassis, craned into position before the perception stack is mounted and the unit goes underground.</span>
+          <span class="txt zh">车辆到场 —— <strong>中车(CRRC)</strong>制造的防爆底盘,吊装到位后装上感知栈,整车下井。</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="p-details">
+  <div class="wrap">
+    <div class="num reveal">
+      <span class="en">03 · Details</span><span class="zh">03 · 细节</span>
+      <span class="big"><span class="en">How</span><span class="zh">怎么做</span></span>
+      <span class="rule-short"></span>
+    </div>
+    <div class="cols">
+      <div class="col reveal">
+        <h4><span class="en">Perception</span><span class="zh">感知</span></h4>
+        <ul class="en">
+          <li><strong>Camera</strong>KBA18(F) explosion-proof</li>
+          <li><strong>LiDAR</strong>Livox Mid-360</li>
+          <li><strong>Detectors</strong>YOLOv8 · OpenCV</li>
+          <li><strong>Mapping</strong>SLAM · point cloud registration</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>相机</strong>KBA18(F) 防爆</li>
+          <li><strong>LiDAR</strong>Livox Mid-360</li>
+          <li><strong>检测</strong>YOLOv8 · OpenCV</li>
+          <li><strong>建图</strong>SLAM · 点云配准</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Compute</span><span class="zh">算力</span></h4>
+        <ul class="en">
+          <li><strong>Edge</strong>Jetson Orin NX 16GB</li>
+          <li><strong>Runtime</strong>ONNX · TensorRT</li>
+          <li><strong>Sim</strong>Unreal + CARLA-style harness</li>
+          <li><strong>Data</strong>Captured + synthetic hybrid</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>边端</strong>Jetson Orin NX 16GB</li>
+          <li><strong>运行时</strong>ONNX · TensorRT</li>
+          <li><strong>仿真</strong>Unreal + 类 CARLA 框架</li>
+          <li><strong>数据</strong>实采 + 合成混合</li>
+        </ul>
+      </div>
+      <div class="col reveal">
+        <h4><span class="en">Delivery</span><span class="zh">交付</span></h4>
+        <ul class="en">
+          <li><strong>Ownership</strong>Perception stack end-to-end</li>
+          <li><strong>Team</strong>Solo on AI perception stack</li>
+          <li><strong>Output</strong>Inspection reports · alerts</li>
+          <li><strong>State</strong>In field trial</li>
+        </ul>
+        <ul class="zh">
+          <li><strong>负责范围</strong>整套感知栈端到端</li>
+          <li><strong>团队</strong>AI 部分独立完成</li>
+          <li><strong>产出</strong>巡检报告 · 告警</li>
+          <li><strong>状态</strong>现场试运行</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-nav">
+  <div class="wrap">
+    <a class="prev" href="01-router-one.html">
+      <span class="dir"><span>←</span> <span class="en">Previous</span><span class="zh">上一项</span></span>
+      <span class="t">Router <em>One</em> — LLM API Gateway</span>
+    </a>
+    <a class="next" href="03-rag-saas.html">
+      <span class="dir" style="justify-content: flex-end;"><span class="en">Next project</span><span class="zh">下一项</span> <span>→</span></span>
+      <span class="t">Multi-LLM <em>RAG SaaS</em> Platform</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <h2 class="reveal en">Let's build<br />something<br />that <span class="strong">ships.</span></h2>
+      <h2 class="reveal zh">一起做出<br />能<span class="strong">落地</span><br />的东西.</h2>
+      <div class="contact reveal">
+        <a class="c-row" href="mailto:tianyu.jty@outlook.com"><span class="k">Email</span><span class="v">tianyu.jty@outlook.com</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://x.com/Tianyujiangjty" target="_blank" rel="noopener"><span class="k">X</span><span class="v">@Tianyujiangjty</span><span class="arrow">→</span></a>
+        <a class="c-row" href="https://github.com/Horisky" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/Horisky</span><span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Tianyu Jiang · 蒋天宇</span>
+      <span><span class="en">Set in Fraunces &amp; Inter Tight</span><span class="zh">字体 Fraunces &amp; Inter Tight</span></span>
+      <a class="totop" href="../index.html"><span class="en">Back to index</span><span class="zh">返回首页</span> <span>↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
