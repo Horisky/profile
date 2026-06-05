@@ -280,7 +280,55 @@
     line-height: 1.75;
     color: var(--ink-soft);
   }
-  .stack-col li { padding: 2px 0; }
+  .stack-col li { padding: 0; border-bottom: 1px solid var(--rule-soft); }
+  .stack-col li:last-child { border-bottom: 0; }
+  .tech-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin: 0;
+    padding: 9px 0;
+    background: none;
+    border: 0;
+    font-family: var(--serif);
+    font-size: 16px;
+    line-height: 1.3;
+    color: var(--ink-soft);
+    text-align: left;
+    cursor: pointer;
+    letter-spacing: -.01em;
+    transition: color .2s;
+  }
+  .tech-name:hover,
+  .tech.open .tech-name { color: var(--ink); }
+  .tech-cue {
+    flex-shrink: 0;
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1;
+    color: var(--muted-2);
+    transition: transform .25s var(--ease), color .2s;
+  }
+  .tech-name:hover .tech-cue { color: var(--accent); }
+  .tech.open .tech-cue { transform: rotate(45deg); color: var(--accent); }
+  .tech-info {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    font-family: var(--sans);
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--muted);
+    transition: max-height .28s var(--ease), opacity .28s ease, padding .28s ease;
+  }
+  .tech.open .tech-info {
+    max-height: 200px;
+    opacity: 1;
+    padding: 0 0 11px;
+  }
+  .tech-info em { font-style: italic; color: var(--ink-soft); }
 
   /* WORK */
   .work-featured {
@@ -663,40 +711,85 @@
       <div class="stack-col reveal">
         <h3><span class="en">Models &amp; ML</span><span class="zh">模型 &amp; ML</span> <span class="tag">a</span></h3>
         <ul>
-          <li>LangChain · LlamaIndex</li>
-          <li>Milvus · FAISS · bge-m3</li>
-          <li>vLLM · LM Studio</li>
-          <li>LoRA · Qwen2.5 · DeepSeek</li>
-          <li><span class="en">Transformer research</span><span class="zh">Transformer 研究</span></li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">LangChain</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Framework for LLM apps — chains, agents, and tool use.</span><span class="zh">构建 LLM 应用的框架 —— 链式调用、Agent 与工具调用。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">Milvus</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Vector database for large-scale similarity search — the retrieval backbone for RAG.</span><span class="zh">面向大规模相似度检索的向量数据库 —— RAG 的检索底座。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">vLLM</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">High-throughput LLM serving with paged attention — fast, batched inference.</span><span class="zh">高吞吐 LLM 推理服务，基于 paged attention —— 快速、可批量。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">LoRA</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Parameter-efficient fine-tuning — adapt a base model by training tiny adapters.</span><span class="zh">参数高效微调 —— 只训练极小的适配器即可定制大模型。</span></div>
+          </li>
         </ul>
       </div>
       <div class="stack-col reveal">
         <h3><span class="en">Vision &amp; Edge</span><span class="zh">视觉 &amp; 边端</span> <span class="tag">b</span></h3>
         <ul>
-          <li>YOLOv8 · OpenCV</li>
-          <li>InsightFace · ArcFace</li>
-          <li>Livox LiDAR · SLAM</li>
-          <li>Jetson Orin NX</li>
-          <li>ONNX Runtime</li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">YOLOv8</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Real-time object detection — the workhorse for person, vehicle and defect detection.</span><span class="zh">实时目标检测 —— 人员、车辆、缺陷检测的主力。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">ArcFace</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Face-recognition embeddings via InsightFace — identity matching by cosine distance.</span><span class="zh">基于 InsightFace 的人脸识别 embedding —— 按余弦距离做身份匹配。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">Livox LiDAR</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">3D point-cloud sensing, paired with SLAM — mapping and positioning underground.</span><span class="zh">三维点云感知，配合 SLAM —— 在井下建图与定位。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">Jetson Orin NX</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">NVIDIA edge module — runs the perception stack on-device, no cloud round-trip.</span><span class="zh">NVIDIA 边缘计算模组 —— 感知栈板载运行，无需上云。</span></div>
+          </li>
         </ul>
       </div>
       <div class="stack-col reveal">
         <h3><span class="en">Backend</span><span class="zh">后端</span> <span class="tag">c</span></h3>
         <ul>
-          <li>Python · FastAPI</li>
-          <li>PostgreSQL · Redis</li>
-          <li>Docker · Nginx</li>
-          <li><span class="en">Feishu · DingTalk APIs</span><span class="zh">飞书 · 钉钉 API</span></li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">FastAPI</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Python async web framework — typed and fast, the default for serving models.</span><span class="zh">Python 异步 Web 框架 —— 带类型、性能好，服务模型的默认选择。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">PostgreSQL</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Relational database — durable storage for users, billing and metadata.</span><span class="zh">关系型数据库 —— 用户、计费与元数据的持久化存储。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">Redis</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">In-memory store — caching, rate limiting and job queues.</span><span class="zh">内存数据库 —— 缓存、限流与任务队列。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">Docker</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Containerized deployment — reproducible builds, on-prem or in the cloud.</span><span class="zh">容器化部署 —— 可复现构建，本地或云端皆可。</span></div>
+          </li>
         </ul>
       </div>
       <div class="stack-col reveal">
         <h3><span class="en">Product</span><span class="zh">产品</span> <span class="tag">d</span></h3>
         <ul>
-          <li>Vue3 · React</li>
-          <li><span class="en">WeChat Mini-Programs</span><span class="zh">微信小程序</span></li>
-          <li>Seedance · Kling APIs</li>
-          <li>Claude Code · Codex</li>
-          <li><span class="en">Agent orchestration</span><span class="zh">Agent 编排</span></li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">Vue 3 · React</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Frontend frameworks — the product surfaces users actually touch.</span><span class="zh">前端框架 —— 用户真正接触的产品界面。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label"><span class="en">WeChat Mini-Programs</span><span class="zh">微信小程序</span></span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">In-WeChat apps — reach China's users with no install.</span><span class="zh">微信生态内的轻应用 —— 无需安装即可触达国内用户。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label">Seedance · Kling</span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Generative-video APIs — text / image to short clips for the drama pipeline.</span><span class="zh">生成式视频 API —— 文本 / 图像生成短片，用于短剧流水线。</span></div>
+          </li>
+          <li class="tech">
+            <button class="tech-name" type="button" aria-expanded="false"><span class="tech-label"><span class="en">Agent orchestration</span><span class="zh">Agent 编排</span></span><span class="tech-cue" aria-hidden="true">+</span></button>
+            <div class="tech-info"><span class="en">Coordinating multiple LLM agents — planning, tools, and review loops.</span><span class="zh">多 Agent 编排 —— 规划、工具调用与审核回路。</span></div>
+          </li>
         </ul>
       </div>
     </div>
@@ -859,6 +952,15 @@
     });
   }, { threshold: .12, rootMargin: "0px 0px -40px 0px" });
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  // Tech stack: click a technology to expand its explanation.
+  document.querySelectorAll(".tech .tech-name").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const li = btn.closest(".tech");
+      const open = li.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
 </script>
 </body>
 </html>
