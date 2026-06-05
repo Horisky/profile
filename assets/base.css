@@ -15,7 +15,7 @@
   --muted-2: #8a8a86;
   --accent: #b74c2c;  /* restrained rust — used sparingly, never as fill */
 
-  --serif: "Fraunces", "Times New Roman", serif;
+  --serif: "Fraunces", "Times New Roman", "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", STSong, SimSun, serif;
   --sans: "Inter Tight", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -36,8 +36,11 @@ html, body { margin: 0; padding: 0; }
 .zh { display: none; }
 html[lang="zh"] .en { display: none; }
 html[lang="zh"] .zh { display: revert; }
-/* CJK body tuning when zh is active */
-html[lang="zh"] body { font-feature-settings: "halt", "palt"; }
+/* CJK body tuning when zh is active.
+   NOTE: do NOT use "halt"/"palt" here — body type is a Latin face (Fraunces)
+   with a CJK fallback, and those features collapse CJK punctuation widths,
+   making 、，。 nearly disappear. Keep punctuation at natural full width. */
+html[lang="zh"] body { font-feature-settings: normal; }
 
 /* ---- meta-bar lang switch ---- */
 .lang-switch {
