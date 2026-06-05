@@ -1,0 +1,10 @@
+# Files excluded from the Cloudflare Pages deployment (not served publicly).
+.git
+.claude
+.gitignore
+.assetsignore
+__pycache__
+*.py
+*.pyc
+vercel.json
+_qa*

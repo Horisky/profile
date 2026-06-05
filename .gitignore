@@ -21,3 +21,6 @@ projects/_pdf/
 
 # Claude Code harness artifacts
 .claude/
+
+# Wrangler (Cloudflare Pages) local cache
+.wrangler/
