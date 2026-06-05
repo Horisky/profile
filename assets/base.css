@@ -15,7 +15,7 @@
   --muted-2: #8a8a86;
   --accent: #b74c2c;  /* restrained rust — used sparingly, never as fill */
 
-  --serif: "Fraunces", "Times New Roman", "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", STSong, SimSun, serif;
+  --serif: "Fraunces", "Noto Serif SC", "Times New Roman", "Songti SC", "Source Han Serif SC", STSong, SimSun, serif;
   --sans: "Inter Tight", system-ui, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -41,6 +41,20 @@ html[lang="zh"] .zh { display: revert; }
    with a CJK fallback, and those features collapse CJK punctuation widths,
    making 、，。 nearly disappear. Keep punctuation at natural full width. */
 html[lang="zh"] body { font-feature-settings: normal; }
+/* Mono micro-labels are uppercase + widely tracked for Latin — that tracking
+   spreads CJK glyphs apart and reads as messy. Tighten it in Chinese mode. */
+html[lang="zh"] .meta-bar,
+html[lang="zh"] .num,
+html[lang="zh"] .label,
+html[lang="zh"] .count,
+html[lang="zh"] .hero-meta,
+html[lang="zh"] .work-featured .meta-row,
+html[lang="zh"] .work-featured .tags,
+html[lang="zh"] .work-row .meta,
+html[lang="zh"] .p-meta .k,
+html[lang="zh"] .p-nr,
+html[lang="zh"] .gal-grid figcaption .no,
+html[lang="zh"] .tags { letter-spacing: .06em; }
 
 /* ---- meta-bar lang switch ---- */
 .lang-switch {
