@@ -81,9 +81,9 @@
     </div>
     <div>
       <p class="lede reveal en">Full rebuild of a campus camera system: <em>InsightFace + ArcFace</em> for identity, YOLOv8m for vehicle detection, FAISS for identity search, served through FastAPI.</p>
-      <p class="lede reveal zh">校园相机系统全量重构:<em>InsightFace + ArcFace</em> 做身份识别,YOLOv8m 做车辆检测,FAISS 做身份检索,FastAPI 提供服务。</p>
+      <p class="lede reveal zh">校园相机系统的全量重构：<em>InsightFace + ArcFace</em> 做身份识别，YOLOv8m 做车辆检测，FAISS 做身份检索，FastAPI 提供服务。</p>
       <p class="lede reveal en">The old system ran brittle rule-based detection with no search index. The rebuild swapped it end-to-end: fresh embeddings, a proper vector store for identity lookup, tighter model choices for vehicles, and a service API that the existing frontend could drop onto without a frontend rewrite.</p>
-      <p class="lede reveal zh">旧系统是脆弱的规则检测,没有检索索引。重构把它端到端换掉:新的 embedding、正经的向量库做身份检索、更紧凑的车辆模型,以及能让旧前端直接对接的新服务 API —— 前端不用重写。</p>
+      <p class="lede reveal zh">旧系统是一套脆弱的规则检测，没有检索索引。重构把它端到端换掉：全新的 embedding、规范的向量库做身份检索、更紧凑的车辆模型，以及一套能让旧前端直接对接的新服务 API —— 前端无需重写。</p>
       <div class="tags reveal">
         <span>InsightFace</span><span class="sep">/</span>
         <span>ArcFace</span><span class="sep">/</span>
@@ -111,7 +111,7 @@
         <figcaption>
           <span class="no">Fig. 01</span>
           <span class="txt en">Two live camera frames, seconds apart. The system finds <strong>16–19 faces per frame</strong>, ranks them by detection quality, and flags unknowns as <em>陌生人</em> against the enrolled identity base — real throughput on real density.</span>
-          <span class="txt zh">两帧实时画面,相隔几秒。系统每帧找到 <strong>16–19 张人脸</strong>,按检测质量排序,对照已入库身份把陌生人标成 <em>陌生人</em> —— 真实密度下的真实吞吐。</span>
+          <span class="txt zh">两帧实时画面，相隔几秒。系统每帧找到 <strong>16–19 张人脸</strong>，按检测质量排序，并对照已入库身份，把未匹配上的标记为 <em>陌生人</em> —— 真实密度下的真实吞吐。</span>
         </figcaption>
       </figure>
 
@@ -123,7 +123,7 @@
         <figcaption>
           <span class="no">Fig. 02</span>
           <span class="txt en">Vehicle capture grid. YOLOv8 boxes the subject, confidences are exposed next to each thumbnail (<strong>57%–93%</strong>), and every record carries its <strong>camera ID + timestamp</strong> for audit.</span>
-          <span class="txt zh">车辆抓拍格。YOLOv8 框出目标,每张缩略图旁边直接显示置信度(<strong>57%–93%</strong>),每条记录都带 <strong>相机 ID + 时间戳</strong> 可回溯。</span>
+          <span class="txt zh">车辆抓拍格。YOLOv8 框出目标，每张缩略图旁边直接显示置信度（<strong>57%–93%</strong>），每条记录都带 <strong>相机 ID + 时间戳</strong>，可回溯。</span>
         </figcaption>
       </figure>
 
@@ -135,7 +135,7 @@
         <figcaption>
           <span class="no">Fig. 03</span>
           <span class="txt en">The operator console — <strong>RTSP source</strong>, school + device IDs, capture schedule with time-window limits, and a <strong>retention policy</strong> for old evidence. Day-to-day controls, nothing the operator can't handle alone.</span>
-          <span class="txt zh">运营台 —— <strong>RTSP 源</strong>、学校和设备 ID、按时段限制的抓拍排期,以及老证据的<strong>留存策略</strong>。日常控制,都能一个人搞。</span>
+          <span class="txt zh">运营台 —— <strong>RTSP 源</strong>、学校和设备 ID、带时段限制的抓拍排期，以及旧证据的<strong>留存策略</strong>。日常运维，一个人就能全部搞定。</span>
         </figcaption>
       </figure>
 
@@ -147,7 +147,7 @@
         <figcaption>
           <span class="no">Fig. 04</span>
           <span class="txt en">An ad-hoc <em>Face Detect with Quality Filter</em> surface. Drop any frame in, return a ranked list of detected faces — the same backend the live pipeline uses, exposed for manual review and reruns.</span>
-          <span class="txt zh">一个即时的 <em>带质量过滤的人脸检测</em> 入口。丢一帧进去,返回按质量排序的人脸 —— 和线上流水线同一套后端,为手动复核和重跑开放。</span>
+          <span class="txt zh">一个即时的 <em>带质量过滤的人脸检测</em> 入口。丢一帧进去，返回按质量排序的人脸 —— 和线上流水线共用同一套后端，开放给手动复核与重跑。</span>
         </figcaption>
       </figure>
     </div>
@@ -187,7 +187,7 @@
         </ul>
         <ul class="zh">
           <li><strong>检测</strong>YOLOv8m</li>
-          <li><strong>类别</strong>小车 · 面包 · 自行车 · 车牌</li>
+          <li><strong>类别</strong>小车 · 面包车 · 自行车 · 车牌</li>
           <li><strong>跟踪</strong>ByteTrack</li>
           <li><strong>OCR</strong>车牌识别流水线</li>
         </ul>

@@ -81,9 +81,9 @@
     </div>
     <div>
       <p class="lede reveal en">A freemium RAG platform with <em>image-text hybrid retrieval</em> and dual-market pricing (China + overseas). Built around bge-m3, Milvus, and a pluggable multi-provider LLM router. I author the Python AI service layer end-to-end.</p>
-      <p class="lede reveal zh">带 <em>图文混合检索</em> 的 Freemium RAG 平台,中国 + 海外双市场定价。基于 bge-m3、Milvus,以及一个可插拔的多 provider LLM 路由。Python AI 服务层我独立完成。</p>
+      <p class="lede reveal zh">带 <em>图文混合检索</em> 的 Freemium RAG 平台，面向国内 + 海外双市场定价。底层基于 bge-m3、Milvus，以及一个可插拔的多 provider LLM 路由。Python AI 服务层由我独立完成。</p>
       <p class="lede reveal en">The product bet: most RAG offerings ship a single embedding model and a single LLM. This one lets teams hot-swap providers, blend text with image retrieval, and run the whole thing on their own compute when compliance demands it.</p>
-      <p class="lede reveal zh">产品思路:多数 RAG 产品只给一个 embedding + 一个 LLM。这个可以随时切 provider、把文本和图像一起检,合规要求时可以整套跑在客户自己的机器上。</p>
+      <p class="lede reveal zh">产品思路：多数 RAG 产品只配一个 embedding + 一个 LLM。这一套可以随时切换 provider、把文本和图像一起检索，在有合规要求时还能整套部署到客户自己的机器上。</p>
       <div class="tags reveal">
         <span>LangChain</span><span class="sep">/</span>
         <span>Milvus</span><span class="sep">/</span>
@@ -111,7 +111,7 @@
         <figcaption>
           <span class="no">Fig. 01</span>
           <span class="txt en">The <em>Ask the Knowledge Base</em> surface in production — knowledge-base registry above, retrieval-grounded Q&amp;A below. Every answer carries its <strong>source citations</strong> back to the exact file and page; the provider (here <strong>openai</strong>) is swappable per-query.</span>
-          <span class="txt zh">生产环境的 <em>Ask the Knowledge Base</em> 界面 —— 上方是知识库登记,下方是带检索依据的问答。每个回答都带<strong>引用溯源</strong>精确到文件和页;provider(这里是 <strong>openai</strong>)每次查询都能换。</span>
+          <span class="txt zh">生产环境的 <em>Ask the Knowledge Base</em> 界面 —— 上方是知识库登记，下方是带检索依据的问答。每个回答都带<strong>引用溯源</strong>，精确到具体文件和页码；provider（这里是 <strong>openai</strong>）可逐次查询切换。</span>
         </figcaption>
       </figure>
     </div>
@@ -167,7 +167,7 @@
         <ul class="zh">
           <li><strong>服务</strong>Python AI 层</li>
           <li><strong>API</strong>FastAPI · gRPC 桥</li>
-          <li><strong>市场</strong>国内 + 海外,双定价</li>
+          <li><strong>市场</strong>国内 + 海外，双定价</li>
           <li><strong>私有化</strong>Docker Compose</li>
         </ul>
       </div>
